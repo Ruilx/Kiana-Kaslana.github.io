@@ -1,23 +1,118 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>Kiana's Here!</title>
 <style>
-.title{
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+div{
 	display: block;
-	position: relative;
-	left: 351px;
-	top: 282px;
+}
+.upBlank{
+	height: 290px;
+}
+.midBlank{
+	height: 70px;
+}
+.title{
 	font-family: "微软雅黑";
 	font-size: 72px;
 	color: #F0F0F0;
+	text-align: center;
+}
+.uploadPic{
+	width: 400px;
+	height:100px;
+	margin:0 auto;
+	padding: 5px;
+	text-align: center;
+	font-size: 9px;
+}
+.file{
+	width: 300px;
+	line-height: 25px;
+	background-color: rgba(20, 20, 20, 0.5);
+	color: rgb(240, 240, 240)
+}
+.submit{
+	#width: 100px;
+	line-height: 25px;
+	background-color: #202020;
+	color: #F0F0F0;
 }
 </style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-412819-5', 'saucenao.com');
+  ga('send', 'pageview');
+</script>
 
 </head>
 
-<body background="1199394052c505adb4o.jpg" style="background-attachment:scroll;background-position:left top;background-repeat: no-repeat">
+<body background="1199394052c505adb4o.jpg" style="background-attachment:fixed;background-position:center top;background-repeat: no-repeat">
+<div class="upBlank"></div>
 <div class="title">キアナは来ますね！</div>
+<div class="midBlank"></div>
+<div class="uploadPic">
+<form action="http://saucenao.com/search.php" method="post" enctype="multipart/form-data">
+	<input type="file" name="file" size="50" id="file" class="file" onclick="deUc()"/>
+	<input type="submit" value="Get Sauce" accesskey="s" class="submit"/>
+	<div style="display: none">
+		URL: <input type="checkbox" name="urlify" id="urlcheckbox" />
+		<input type="text" name="url" size="40" onfocus="enUc()" /><br>
+		FRAME: <input type="text" name="frame" value="1" size="5" /><br>
+		HIDE: 
+		<select name="hide" size="1">
+			<option selected value="0">None</option>
+			<option value="1">Known Explicit</option>
+			<option value="2">Known and Suspected Explicit</option>
+			<option value="3">All but Known Safe</option>
+		</select><br>
+		DATABASE:
+		<select name="database" size="1">
+			<option selected="selected" value="999">All Databases</option>
+			<option value="0">H-Magazines</option>
+			<option value="1">H-Anime</option>
+			<option value="2">H-Game CG</option>
+			<option value="3">DoujinshiDB</option>
+			<option value="5">pixiv Images</option>
+			<option value="7">Anime</option>
+			<option value="8">Nico Nico Seiga</option>
+			<option value="9">Danbooru</option>
+			<option value="10">drawr Images</option>
+			<option value="11">Nijie Images</option>
+			<option value="12">yande.re</option>
+			<option value="13">openings.moe</option>
+			<option value="14">IMDb (DO NOT USE!)</option>
+			<option value="15">Shutterstock</option>
+			<option value="16">FAKKU</option>
+			<option value="18">H-Misc</option>
+			<option value="19">2D-Market</option>
+			<option value="20">MediBang</option>
+			<option value="999">TBA...</option>
+		</select>
+	</div>
+</form>
+<div class="upBlank"></div>
+<div class="uploadPic">
+Powered By SauceNAO, IQDB project
+</div>
 </body>
-
+<script>
+function enUc()
+{
+	document.getElementById('urlcheckbox').checked = true;
+}
+function deUc()
+{
+	document.getElementById('urlcheckbox').checked = false;
+}
+</script>
 
 </html>
